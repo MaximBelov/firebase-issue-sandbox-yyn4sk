@@ -1,5 +1,5 @@
 import { initializeApp } from 'firebase/app';
-import { getAnalytics, logEvent } from 'firebase/analytics';
+import { getAnalytics } from 'firebase/analytics';
 
 /**
  * Initialize Firebase
@@ -11,14 +11,15 @@ import { getAnalytics, logEvent } from 'firebase/analytics';
  * your setup to reproduce the error.
  */
 const app = initializeApp({
-  apiKey: "AIzaSyBrhMtIYYu7C-hWwMGoForjuhkNSyBakPo",
-  projectId: "stackblitztest-d3376",
-  appId: "1:121906792905:web:8b9b4b3d0b207c85f48018",
-  measurementId: "G-SCP40WKZE6"
+  apiKey: 'AIzaSyBNHCyZ-bpv-WA-HpXTmigJm2aq3z1kaH8',
+  authDomain: 'jscore-sandbox-141b5.firebaseapp.com',
+  databaseURL: 'https://jscore-sandbox-141b5.firebaseio.com',
+  projectId: 'jscore-sandbox-141b5',
+  storageBucket: 'jscore-sandbox-141b5.appspot.com',
+  messagingSenderId: '280127633210',
 });
 
 const analytics = getAnalytics(app);
 console.log(analytics);
 // Reproduce Issue below
 // ...
-logEvent(analytics, 'notification_received');
